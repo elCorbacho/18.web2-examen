@@ -9,43 +9,28 @@ import org.springframework.stereotype.Component;
 public class AlbumMapper {
     
     public AlbumResponseDTO toResponseDTO(Album album) {
-        if (album == null) {
-            return null;
-        }
-        
-        AlbumResponseDTO dto = new AlbumResponseDTO();
-        dto.setId(album.getId());
-        dto.setNombre(album.getNombre());
-        dto.setYear(album.getYear());
-        dto.setDescripcion(album.getDescripcion());
-        dto.setCreatedAt(album.getCreatedAt());
-        dto.setUpdatedAt(album.getUpdatedAt());
-        dto.setActive(album.getActive());
-        
-        return dto;
+        return AlbumResponseDTO.builder()
+            .id(album.getId())
+            .nombre(album.getNombre())
+            .year(album.getYear())
+            .descripcion(album.getDescripcion())
+            .createdAt(album.getCreatedAt())
+            .updatedAt(album.getUpdatedAt())
+            .build();
     }
     
-    public Album toEntity(AlbumRequestDTO dto) {
-        if (dto == null) {
-            return null;
-        }
-        
-        Album album = new Album();
-        album.setNombre(dto.getNombre());
-        album.setYear(dto.getYear());
-        album.setDescripcion(dto.getDescripcion());
-        album.setActive(true);
-        
-        return album;
+    public Album toEntity(AlbumRequestDTO requestDTO) {
+        return Album.builder()
+            .nombre(requestDTO.getNombre())
+            .year(requestDTO.getYear())
+            .descripcion(requestDTO.getDescripcion())
+            .active(true)
+            .build();
     }
     
-    public void updateEntity(AlbumRequestDTO dto, Album album) {
-        if (dto == null) {
-            return;
-        }
-        
-        album.setNombre(dto.getNombre());
-        album.setYear(dto.getYear());
-        album.setDescripcion(dto.getDescripcion());
+    public void updateEntity(AlbumRequestDTO requestDTO, Album album) {
+        album.setNombre(requestDTO.getNombre());
+        album.setYear(requestDTO.getYear());
+        album.setDescripcion(requestDTO.getDescripcion());
     }
 }
