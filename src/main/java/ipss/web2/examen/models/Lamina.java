@@ -25,7 +25,7 @@ public class Lamina {
     @Column(name = "nombre", nullable = false)
     private String nombre;
 
-    @Column(name = "imagen", nullable = false)
+    @Column(name = "imagen", nullable = true)
     private String imagen;
 
     @Column(name = "fecha_lanzamiento", nullable = false)

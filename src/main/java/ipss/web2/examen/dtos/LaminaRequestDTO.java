@@ -16,7 +16,6 @@ public class LaminaRequestDTO {
     @NotBlank(message = "El nombre de la lámina es obligatorio")
     private String nombre;
     
-    @NotBlank(message = "La imagen es obligatoria")
     private String imagen;
     
     @NotNull(message = "La fecha de lanzamiento es obligatoria")
