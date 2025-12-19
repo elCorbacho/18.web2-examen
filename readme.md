@@ -1,0 +1,1 @@
+CONTROL LOGICA laminas_base
