@@ -2,6 +2,7 @@ package ipss.web2.examen.services;
 
 import ipss.web2.examen.dtos.AlbumRequestDTO;
 import ipss.web2.examen.dtos.AlbumResponseDTO;
+import ipss.web2.examen.exceptions.ResourceNotFoundException;
 import ipss.web2.examen.mappers.AlbumMapper;
 import ipss.web2.examen.models.Album;
 import ipss.web2.examen.repository.AlbumRepository;
@@ -35,7 +36,7 @@ public class AlbumService {
     @Transactional(readOnly = true)
     public AlbumResponseDTO obtenerAlbumPorId(Long id) {
         Album album = albumRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Album no encontrado con ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Album", "ID", id));
         return albumMapper.toResponseDTO(album);
     }
     
@@ -55,7 +56,7 @@ public class AlbumService {
      */
     public AlbumResponseDTO actualizarAlbum(Long id, AlbumRequestDTO requestDTO) {
         Album album = albumRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Album no encontrado con ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Album", "ID", id));
         
         albumMapper.updateEntity(requestDTO, album);
         Album albumActualizado = albumRepository.save(album);
@@ -67,7 +68,7 @@ public class AlbumService {
      */
     public void eliminarAlbum(Long id) {
         Album album = albumRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Album no encontrado con ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Album", "ID", id));
         
         album.setActive(false);
         albumRepository.save(album);

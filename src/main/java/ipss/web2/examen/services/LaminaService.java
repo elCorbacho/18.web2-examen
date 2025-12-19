@@ -2,6 +2,7 @@ package ipss.web2.examen.services;
 
 import ipss.web2.examen.dtos.LaminaRequestDTO;
 import ipss.web2.examen.dtos.LaminaResponseDTO;
+import ipss.web2.examen.exceptions.ResourceNotFoundException;
 import ipss.web2.examen.mappers.LaminaMapper;
 import ipss.web2.examen.models.Album;
 import ipss.web2.examen.models.Lamina;
@@ -36,7 +37,7 @@ public class LaminaService {
     @Transactional(readOnly = true)
     public LaminaResponseDTO obtenerLaminaPorId(Long id) {
         Lamina lamina = laminaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Lámina no encontrada con ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Lámina", "ID", id));
         return laminaMapper.toResponseDTO(lamina);
     }
     
@@ -67,7 +68,7 @@ public class LaminaService {
      */
     public LaminaResponseDTO actualizarLamina(Long id, LaminaRequestDTO requestDTO, Album album) {
         Lamina lamina = laminaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Lámina no encontrada con ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Lámina", "ID", id));
         
         laminaMapper.updateEntity(requestDTO, lamina, album);
         Lamina laminaActualizada = laminaRepository.save(lamina);
@@ -79,7 +80,7 @@ public class LaminaService {
      */
     public void eliminarLamina(Long id) {
         Lamina lamina = laminaRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("Lámina no encontrada con ID: " + id));
+                .orElseThrow(() -> new ResourceNotFoundException("Lámina", "ID", id));
         
         lamina.setActive(false);
         laminaRepository.save(lamina);

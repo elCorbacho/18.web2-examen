@@ -1,5 +1,6 @@
 package ipss.web2.examen.controllers.api;
 
+import ipss.web2.examen.dtos.ApiResponseDTO;
 import ipss.web2.examen.dtos.LaminaRequestDTO;
 import ipss.web2.examen.dtos.LaminaResponseDTO;
 import ipss.web2.examen.repository.AlbumRepository;
@@ -11,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 /**
@@ -29,51 +31,70 @@ public class LaminaController {
      * POST /api/laminas - Crear una nueva lámina
      * 
      * @param requestDTO DTO con los datos de la lámina a crear
-     * @return ResponseEntity con la lámina creada (201 CREATED)
+     * @return ResponseEntity con ApiResponseDTO envolviendo la lámina creada (201 CREATED)
      */
     @PostMapping
-    public ResponseEntity<LaminaResponseDTO> crearLamina(@Valid @RequestBody LaminaRequestDTO requestDTO) {
-        // Obtener el album real de la BD
+    public ResponseEntity<ApiResponseDTO<LaminaResponseDTO>> crearLamina(@Valid @RequestBody LaminaRequestDTO requestDTO) {
         Album album = albumRepository.findById(requestDTO.getAlbumId())
                 .orElseThrow(() -> new RuntimeException("Album no encontrado con ID: " + requestDTO.getAlbumId()));
         
         LaminaResponseDTO response = laminaService.crearLamina(requestDTO, album);
-        return ResponseEntity.status(HttpStatus.CREATED).body(response);
+        return ResponseEntity.status(HttpStatus.CREATED).body(ApiResponseDTO.<LaminaResponseDTO>builder()
+            .success(true)
+            .message("Lámina creada exitosamente")
+            .data(response)
+            .timestamp(LocalDateTime.now())
+            .build());
     }
     
     /**
      * GET /api/laminas/{id} - Obtener lámina por ID
      * 
      * @param id ID de la lámina a recuperar
-     * @return ResponseEntity con la lámina encontrada (200 OK)
+     * @return ResponseEntity con ApiResponseDTO envolviendo la lámina encontrada (200 OK)
      */
     @GetMapping("/{id}")
-    public ResponseEntity<LaminaResponseDTO> obtenerLaminaPorId(@PathVariable Long id) {
+    public ResponseEntity<ApiResponseDTO<LaminaResponseDTO>> obtenerLaminaPorId(@PathVariable Long id) {
         LaminaResponseDTO response = laminaService.obtenerLaminaPorId(id);
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok(ApiResponseDTO.<LaminaResponseDTO>builder()
+            .success(true)
+            .message("Lámina obtenida correctamente")
+            .data(response)
+            .timestamp(LocalDateTime.now())
+            .build());
     }
     
     /**
      * GET /api/laminas - Obtener todas las láminas activas
      * 
-     * @return ResponseEntity con lista de láminas (200 OK)
+     * @return ResponseEntity con ApiResponseDTO envolviendo lista de láminas (200 OK)
      */
     @GetMapping
-    public ResponseEntity<List<LaminaResponseDTO>> obtenerTodasLasLaminas() {
+    public ResponseEntity<ApiResponseDTO<List<LaminaResponseDTO>>> obtenerTodasLasLaminas() {
         List<LaminaResponseDTO> laminas = laminaService.obtenerTodasLasLaminas();
-        return ResponseEntity.ok(laminas);
+        return ResponseEntity.ok(ApiResponseDTO.<List<LaminaResponseDTO>>builder()
+            .success(true)
+            .message("Láminas obtenidas correctamente. Total: " + laminas.size())
+            .data(laminas)
+            .timestamp(LocalDateTime.now())
+            .build());
     }
     
     /**
      * GET /api/laminas/album/{albumId} - Obtener láminas por album
      * 
      * @param albumId ID del album
-     * @return ResponseEntity con lista de láminas del album (200 OK)
+     * @return ResponseEntity con ApiResponseDTO envolviendo lista de láminas del album (200 OK)
      */
     @GetMapping("/album/{albumId}")
-    public ResponseEntity<List<LaminaResponseDTO>> obtenerLaminasPorAlbum(@PathVariable Long albumId) {
+    public ResponseEntity<ApiResponseDTO<List<LaminaResponseDTO>>> obtenerLaminasPorAlbum(@PathVariable Long albumId) {
         List<LaminaResponseDTO> laminas = laminaService.obtenerLaminasPorAlbum(albumId);
-        return ResponseEntity.ok(laminas);
+        return ResponseEntity.ok(ApiResponseDTO.<List<LaminaResponseDTO>>builder()
+            .success(true)
+            .message("Láminas del album obtenidas correctamente. Total: " + laminas.size())
+            .data(laminas)
+            .timestamp(LocalDateTime.now())
+            .build());
     }
     
     /**
@@ -81,18 +102,22 @@ public class LaminaController {
      * 
      * @param id ID de la lámina a actualizar
      * @param requestDTO DTO con los nuevos datos de la lámina
-     * @return ResponseEntity con la lámina actualizada (200 OK)
+     * @return ResponseEntity con ApiResponseDTO envolviendo la lámina actualizada (200 OK)
      */
     @PutMapping("/{id}")
-    public ResponseEntity<LaminaResponseDTO> actualizarLamina(
+    public ResponseEntity<ApiResponseDTO<LaminaResponseDTO>> actualizarLamina(
             @PathVariable Long id,
             @Valid @RequestBody LaminaRequestDTO requestDTO) {
-        // Obtener el album real de la BD
         Album album = albumRepository.findById(requestDTO.getAlbumId())
                 .orElseThrow(() -> new RuntimeException("Album no encontrado con ID: " + requestDTO.getAlbumId()));
         
         LaminaResponseDTO response = laminaService.actualizarLamina(id, requestDTO, album);
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok(ApiResponseDTO.<LaminaResponseDTO>builder()
+            .success(true)
+            .message("Lámina actualizada correctamente")
+            .data(response)
+            .timestamp(LocalDateTime.now())
+            .build());
     }
     
     /**
@@ -100,11 +125,16 @@ public class LaminaController {
      * Marca la lámina como inactiva sin borrar los datos de la BD
      * 
      * @param id ID de la lámina a eliminar
-     * @return ResponseEntity vacío (204 NO CONTENT)
+     * @return ResponseEntity con ApiResponseDTO con mensaje de confirmación (200 OK)
      */
     @DeleteMapping("/{id}")
-    public ResponseEntity<Void> eliminarLamina(@PathVariable Long id) {
+    public ResponseEntity<ApiResponseDTO<String>> eliminarLamina(@PathVariable Long id) {
         laminaService.eliminarLamina(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok(ApiResponseDTO.<String>builder()
+            .success(true)
+            .message("Lámina eliminada correctamente")
+            .data("Lámina con ID: " + id + " ha sido marcada como inactiva")
+            .timestamp(LocalDateTime.now())
+            .build());
     }
 }
