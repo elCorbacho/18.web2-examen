@@ -13,10 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * Controlador REST para gestión de Álbumes
- * Endpoints: /api/albums
- */
+// Controlador REST para gestión de Álbumes - /api/albums
 @RestController
 @RequestMapping("/api/albums")
 @RequiredArgsConstructor
@@ -24,9 +21,7 @@ public class AlbumController {
     
     private final AlbumService albumService;
     
-    /**
-     * POST /api/albums - Crear un nuevo álbum
-     */
+    // POST /api/albums - Crear nuevo álbum
     @PostMapping
     public ResponseEntity<ApiResponseDTO<AlbumResponseDTO>> crearAlbum(
             @Valid @RequestBody AlbumRequestDTO requestDTO) {
@@ -40,9 +35,7 @@ public class AlbumController {
                 .build());
     }
     
-    /**
-     * GET /api/albums/{id} - Obtener álbum por ID
-     */
+    // GET /api/albums/{id} - Obtener álbum por ID
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponseDTO<AlbumResponseDTO>> obtenerAlbumPorId(
             @PathVariable Long id) {
@@ -56,9 +49,7 @@ public class AlbumController {
                 .build());
     }
     
-    /**
-     * GET /api/albums - Obtener todos los álbumes
-     */
+    // GET /api/albums - Listar todos los álbumes
     @GetMapping
     public ResponseEntity<ApiResponseDTO<List<AlbumResponseDTO>>> obtenerTodosLosAlbumes() {
         List<AlbumResponseDTO> response = albumService.obtenerTodosLosAlbums();
@@ -71,9 +62,7 @@ public class AlbumController {
                 .build());
     }
     
-    /**
-     * PUT /api/albums/{id} - Actualizar un álbum
-     */
+    // PUT /api/albums/{id} - Actualizar álbum
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponseDTO<AlbumResponseDTO>> actualizarAlbum(
             @PathVariable Long id,
@@ -88,9 +77,7 @@ public class AlbumController {
                 .build());
     }
     
-    /**
-     * DELETE /api/albums/{id} - Eliminar un álbum
-     */
+    // DELETE /api/albums/{id} - Eliminar álbum (soft delete)
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponseDTO<String>> eliminarAlbum(@PathVariable Long id) {
         albumService.eliminarAlbum(id);

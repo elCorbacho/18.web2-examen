@@ -16,16 +16,7 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * Controlador REST para CRUD de Láminas como Usuario
- * Rutas: /api/laminas
- * 
- * CARACTERÍSTICAS:
- * - Al agregar una lámina, VALIDA contra el catálogo del álbum
- * - DETECTA si la lámina es REPETIDA (copias previas)
- * - INFORMA si está o NO en el catálogo
- * - Retorna todas las copias de la lámina (incluyendo la nueva)
- */
+// Controlador REST para CRUD de Láminas - /api/laminas (valida catálogo, detecta repetidas)
 @SuppressWarnings("null")
 @RestController
 @RequestMapping("/api/laminas")
@@ -34,22 +25,7 @@ public class LaminaUserController {
     
     private final LaminaService laminaService;
     
-    /**
-     * POST /api/laminas - Agregar nueva lámina a un álbum
-     * 
-     * VALIDACIONES:
-     * ✓ Verifica que el álbum existe
-     * ✓ Verifica que el álbum tiene catálogo definido
-     * ✓ Valida si la lámina está en el catálogo
-     * ✓ Detecta si ya existen copias (repetidas)
-     * ✓ Retorna información completa de repeticiones
-     * 
-     * RESPUESTA:
-     * - esRepetida: true si ya existen copias
-     * - estaEnCatalogo: true si está definida en el catálogo
-     * - cantidadRepetidas: Total de copias (incluyendo la nueva)
-     * - lamina: Datos de la lámina agregada
-     */
+    // POST /api/laminas - Agregar lámina validando catálogo y detectando repetidas
     @PostMapping
     public ResponseEntity<ApiResponseDTO<LaminaCargaResponseDTO>> agregarLamina(
             @Valid @RequestBody LaminaRequestDTO laminaDTO) {
@@ -73,16 +49,7 @@ public class LaminaUserController {
                     .build());
     }
     
-    /**
-     * POST /api/laminas/masivo - Agregar múltiples láminas
-     * Carga masiva de hasta 10+ láminas en una sola solicitud
-     * 
-     * Características:
-     * ✓ Valida cada lámina contra el catálogo
-     * ✓ Detecta repetidas automáticamente
-     * ✓ Continúa procesando incluso si hay errores
-     * ✓ Retorna reporte detallado de cada lámina
-     */
+    // POST /api/laminas/masivo - Carga masiva de láminas con validación y reporte detallado
     @PostMapping("/masivo")
     public ResponseEntity<ApiResponseDTO<List<LaminaCargueMasivoResponseDTO>>> agregarLaminasMasivo(
             @Valid @RequestBody LaminaCargueMasivoRequestDTO cargueMasivo) {
@@ -104,11 +71,7 @@ public class LaminaUserController {
                     .build());
     }
     
-    /**
-     * GET /api/laminas/{id} - Obtener lámina por ID
-     * 
-     * Retorna los detalles de una lámina específica
-     */
+    // GET /api/laminas/{id} - Obtener lámina por ID
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponseDTO<LaminaResponseDTO>> obtenerLaminaPorId(@PathVariable Long id) {
         LaminaResponseDTO response = laminaService.obtenerLaminaPorId(id);
@@ -121,11 +84,7 @@ public class LaminaUserController {
                 .build());
     }
     
-    /**
-     * GET /api/laminas - Obtener todas las láminas activas del sistema
-     * 
-     * Retorna un listado de todas las láminas en el sistema (de todos los álbumes)
-     */
+    // GET /api/laminas - Obtener todas las láminas activas del sistema
     @GetMapping
     public ResponseEntity<ApiResponseDTO<List<LaminaResponseDTO>>> obtenerTodasLasLaminas() {
         List<LaminaResponseDTO> laminas = laminaService.obtenerTodasLasLaminas();
@@ -138,11 +97,7 @@ public class LaminaUserController {
                 .build());
     }
     
-    /**
-     * GET /api/laminas/album/{albumId} - Obtener todas las láminas de un álbum
-     * 
-     * Retorna un listado de todas las láminas que el usuario posee en un álbum específico
-     */
+    // GET /api/laminas/album/{albumId} - Obtener láminas poseídas de un álbum
     @GetMapping("/album/{albumId}")
     public ResponseEntity<ApiResponseDTO<List<LaminaResponseDTO>>> obtenerLaminasPorAlbum(@PathVariable Long albumId) {
         List<LaminaResponseDTO> laminas = laminaService.obtenerLaminasPorAlbum(albumId);
@@ -155,11 +110,7 @@ public class LaminaUserController {
                 .build());
     }
     
-    /**
-     * PUT /api/laminas/{id} - Actualizar lámina
-     * 
-     * Permite modificar los datos de una lámina existente
-     */
+    // PUT /api/laminas/{id} - Actualizar lámina
     @PutMapping("/{id}")
     public ResponseEntity<ApiResponseDTO<LaminaResponseDTO>> actualizarLamina(
             @PathVariable Long id,
@@ -175,11 +126,7 @@ public class LaminaUserController {
                 .build());
     }
     
-    /**
-     * DELETE /api/laminas/{id} - Eliminar lámina (soft delete)
-     * 
-     * Marca la lámina como inactiva sin borrar los datos de la base de datos
-     */
+    // DELETE /api/laminas/{id} - Eliminar lámina (soft delete)
     @DeleteMapping("/{id}")
     public ResponseEntity<ApiResponseDTO<String>> eliminarLamina(@PathVariable Long id) {
         laminaService.eliminarLamina(id);

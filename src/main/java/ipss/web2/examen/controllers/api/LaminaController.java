@@ -4,8 +4,6 @@ import ipss.web2.examen.dtos.ApiResponseDTO;
 import ipss.web2.examen.dtos.LaminaCatalogoRequestDTO;
 import ipss.web2.examen.dtos.LaminaCatalogoResponseDTO;
 import ipss.web2.examen.dtos.LaminasEstadoDTO;
-import ipss.web2.examen.models.Album;
-import ipss.web2.examen.services.AlbumService;
 import ipss.web2.examen.services.LaminaService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -16,23 +14,16 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDateTime;
 import java.util.List;
 
-/**
- * Controlador REST para Catálogo de Láminas
- * Rutas: /api/albums/{albumId}/catalogo
- * Solo para administración del catálogo y ver estado
- */
+// Controlador REST para Catálogo de Láminas - /api/albums/{albumId}/catalogo
 @RestController
 @RequestMapping("/api/albums/{albumId}/catalogo")
 @RequiredArgsConstructor
 public class LaminaController {
     
     private final LaminaService laminaService;
-    private final AlbumService albumService;
+
     
-    /**
-     * POST /api/albums/{albumId}/catalogo - Crear catálogo de láminas
-     * Define qué láminas DEBERÍA tener el álbum
-     */
+    //POST /api/albums/{albumId}/catalogo - Crear catálogo de láminas
     @PostMapping
     public ResponseEntity<ApiResponseDTO<List<LaminaCatalogoResponseDTO>>> crearCatalogo(
             @PathVariable Long albumId,
@@ -49,10 +40,7 @@ public class LaminaController {
                     .build());
     }
     
-    /**
-     * GET /api/albums/{albumId}/catalogo - Obtener catálogo de láminas
-     * Devuelve la lista de láminas que DEBERÍA tener el álbum
-     */
+    // GET /api/albums/{albumId}/catalogo - Obtener catálogo de láminas
     @GetMapping
     public ResponseEntity<ApiResponseDTO<List<LaminaCatalogoResponseDTO>>> obtenerCatalogo(@PathVariable Long albumId) {
         List<LaminaCatalogoResponseDTO> catalogo = laminaService.obtenerCatalogo(albumId);
@@ -65,10 +53,7 @@ public class LaminaController {
                 .build());
     }
     
-    /**
-     * GET /api/albums/{albumId}/catalogo/estado - Ver estado del álbum
-     * Muestra: láminas poseídas, faltantes y repetidas
-     */
+    // GET /api/albums/{albumId}/catalogo/estado - Ver estado del álbum
     @GetMapping("/estado")
     public ResponseEntity<ApiResponseDTO<LaminasEstadoDTO>> obtenerEstado(@PathVariable Long albumId) {
         LaminasEstadoDTO estado = laminaService.obtenerEstado(albumId);
