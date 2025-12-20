@@ -1,0 +1,1489 @@
+{
+  "name": "18.web2.examen",
+  "version": "1",
+  "items": [
+    {
+      "type": "http",
+      "name": "Lamina - Listar todas las láminas",
+      "filename": "Lamina - Listar todas las láminas.bru",
+      "seq": 2,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:14:29 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Láminas obtenidas correctamente. Total: 12\",\n  \"data\": [\n    {\n      \"id\": 1,\n      \"nombre\": \"Seiya - Caballero de Pegaso\",\n      \"imagen\": \"https://images.unsplash.com/photo-1617637881555-eae2ba6ee46f?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:12:52.064409\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950464\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 2,\n      \"nombre\": \"Seiya - Caballero de Pegaso\",\n      \"imagen\": \"https://images.unsplash.com/photo-1617637881555-eae2ba6ee46f?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:12:52.60154\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950964\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 3,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:12:53.140771\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950964\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 4,\n      \"nombre\": \"Goku - Super Saiyajin\",\n      \"imagen\": \"https://images.unsplash.com/photo-1632779686507-fe4db93d0f93?w=400\",\n      \"fechaLanzamiento\": \"1989-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:12:58.5161\",\n      \"updatedAt\": \"2025-12-20T00:12:58.5161\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 2,\n        \"nombre\": \"Dragon Ball Z\",\n        \"year\": 1989\n      }\n    },\n    {\n      \"id\": 5,\n      \"nombre\": \"Vegeta - El Príncipe Saiyajin\",\n      \"imagen\": \"https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400\",\n      \"fechaLanzamiento\": \"1989-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:12:59.050774\",\n      \"updatedAt\": \"2025-12-20T00:13:01.471266\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 2,\n        \"nombre\": \"Dragon Ball Z\",\n        \"year\": 1989\n      }\n    },\n    {\n      \"id\": 6,\n      \"nombre\": \"Batalla contra Freezer\",\n      \"imagen\": \"https://images.unsplash.com/photo-1626814026595-cac13b1db48d?w=400\",\n      \"fechaLanzamiento\": \"1989-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:12:59.588636\",\n      \"updatedAt\": \"2025-12-20T00:13:01.471266\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 2,\n        \"nombre\": \"Dragon Ball Z\",\n        \"year\": 1989\n      }\n    },\n    {\n      \"id\": 7,\n      \"nombre\": \"Goku - Super Saiyajin\",\n      \"imagen\": \"https://images.unsplash.com/photo-1632779686507-fe4db93d0f93?w=400\",\n      \"fechaLanzamiento\": \"1989-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:13:00.123697\",\n      \"updatedAt\": \"2025-12-20T00:13:01.471266\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 2,\n        \"nombre\": \"Dragon Ball Z\",\n        \"year\": 1989\n      }\n    },\n    {\n      \"id\": 8,\n      \"nombre\": \"Goku - Super Saiyajin\",\n      \"imagen\": \"https://images.unsplash.com/photo-1632779686507-fe4db93d0f93?w=400\",\n      \"fechaLanzamiento\": \"1989-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:13:00.659847\",\n      \"updatedAt\": \"2025-12-20T00:13:01.47227\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 2,\n        \"nombre\": \"Dragon Ball Z\",\n        \"year\": 1989\n      }\n    },\n    {\n      \"id\": 9,\n      \"nombre\": \"Naruto Uzumaki - El Hokage\",\n      \"imagen\": \"https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400\",\n      \"fechaLanzamiento\": \"2002-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:13:06.159052\",\n      \"updatedAt\": \"2025-12-20T00:13:08.03435\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 3,\n        \"nombre\": \"Naruto\",\n        \"year\": 2002\n      }\n    },\n    {\n      \"id\": 10,\n      \"nombre\": \"Sasuke Uchiha - El Último de su Clan\",\n      \"imagen\": \"https://images.unsplash.com/photo-1619983081563-430f63602d4b?w=400\",\n      \"fechaLanzamiento\": \"2002-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:13:06.691975\",\n      \"updatedAt\": \"2025-12-20T00:13:08.03435\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 3,\n        \"nombre\": \"Naruto\",\n        \"year\": 2002\n      }\n    },\n    {\n      \"id\": 11,\n      \"nombre\": \"Sakura Haruno - Kunoichi Poderosa\",\n      \"imagen\": \"https://images.unsplash.com/photo-1625948515291-89613c66ba51?w=400\",\n      \"fechaLanzamiento\": \"2002-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:13:07.226253\",\n      \"updatedAt\": \"2025-12-20T00:13:08.03435\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 3,\n        \"nombre\": \"Naruto\",\n        \"year\": 2002\n      }\n    },\n    {\n      \"id\": 12,\n      \"nombre\": \"Tanjiro Kamado - Cazador de Demonios\",\n      \"imagen\": \"https://images.unsplash.com/photo-1611339555312-e607c25352ca?w=400\",\n      \"fechaLanzamiento\": \"2018-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:13:12.59356\",\n      \"updatedAt\": \"2025-12-20T00:13:12.59356\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 4,\n        \"nombre\": \"Demon Slayer\",\n        \"year\": 2018\n      }\n    }\n  ],\n  \"timestamp\": \"2025-12-20T00:14:29.3774756\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Album - Listar todos los albums",
+      "filename": "Album - Listar todos los albums.bru",
+      "seq": 12,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/albums",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:31 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Álbumes recuperados exitosamente\",\n  \"data\": [\n    {\n      \"id\": 1,\n      \"nombre\": \"Caballeros del Zodiaco\",\n      \"year\": 1986,\n      \"descripcion\": \"Manga clásico sobre guerreros que protegen a Atenea\",\n      \"createdAt\": \"2025-12-20T00:12:48.758799\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950464\"\n    },\n    {\n      \"id\": 2,\n      \"nombre\": \"Dragon Ball Z\",\n      \"year\": 1989,\n      \"descripcion\": \"Saga de acción y aventura que cambió el anime para siempre\",\n      \"createdAt\": \"2025-12-20T00:12:55.157631\",\n      \"updatedAt\": \"2025-12-20T00:13:01.471266\"\n    },\n    {\n      \"id\": 3,\n      \"nombre\": \"Naruto\",\n      \"year\": 2002,\n      \"descripcion\": \"Historia épica de un ninja que busca ser reconocido\",\n      \"createdAt\": \"2025-12-20T00:13:02.941073\",\n      \"updatedAt\": \"2025-12-20T00:13:08.03435\"\n    },\n    {\n      \"id\": 4,\n      \"nombre\": \"Demon Slayer\",\n      \"year\": 2018,\n      \"descripcion\": \"La batalla entre cazadores de demonios y fuerzas oscuras\",\n      \"createdAt\": \"2025-12-20T00:13:09.246782\",\n      \"updatedAt\": \"2025-12-20T00:13:13.396194\"\n    },\n    {\n      \"id\": 5,\n      \"nombre\": \"Berserk\",\n      \"year\": 1997,\n      \"descripcion\": \"Oscura epopeya de un guerrero en busca de venganza\",\n      \"createdAt\": \"2025-12-20T00:13:14.330593\",\n      \"updatedAt\": \"2025-12-20T00:13:16.748002\"\n    }\n  ],\n  \"timestamp\": \"2025-12-20T00:16:31.044419\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/albums",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - Obtener lámina por ID",
+      "filename": "Lamina - Obtener lámina por ID.bru",
+      "seq": 3,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:14:39 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Lámina obtenida correctamente\",\n  \"data\": {\n    \"id\": 1,\n    \"nombre\": \"Seiya - Caballero de Pegaso\",\n    \"imagen\": \"https://images.unsplash.com/photo-1617637881555-eae2ba6ee46f?w=400\",\n    \"fechaLanzamiento\": \"1986-01-01\",\n    \"tipoLamina\": \"PORTADA\",\n    \"createdAt\": \"2025-12-20T00:12:52.064409\",\n    \"updatedAt\": \"2025-12-20T00:12:53.950464\",\n    \"active\": true,\n    \"album\": {\n      \"id\": 1,\n      \"nombre\": \"Caballeros del Zodiaco\",\n      \"year\": 1986\n    }\n  },\n  \"timestamp\": \"2025-12-20T00:14:39.4034221\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas/1",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - Agregar lamina a un album sin imagen",
+      "filename": "Lamina - Agregar lamina a un album sin imagen.bru",
+      "seq": 6,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"nombre\": \"Armadura Dorada de Aries\",\n  \"imagen\": \"\",\n  \"fechaLanzamiento\": \"1986-01-01\",\n  \"tipoLamina\": \"CONTENIDO\",\n  \"albumId\": 1\n}  ",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "201",
+            "statusText": "Created",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:15:36 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Lámina agregada (repetida: 4 copias totales)\",\n  \"data\": {\n    \"esRepetida\": true,\n    \"estaEnCatalogo\": true,\n    \"cantidadRepetidas\": 4,\n    \"lamina\": {\n      \"id\": 18,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:15:35.817718\",\n      \"updatedAt\": \"2025-12-20T00:15:35.817718\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    }\n  },\n  \"timestamp\": \"2025-12-20T00:15:36.2207142\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"nombre\": \"Armadura Dorada de Aries\",\n  \"imagen\": \"\",\n  \"fechaLanzamiento\": \"1986-01-01\",\n  \"tipoLamina\": \"CONTENIDO\",\n  \"albumId\": 1\n}  ",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - Actualizar datos de lamina",
+      "filename": "Lamina - Actualizar datos de lamina.bru",
+      "seq": 10,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas/1",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"id\" : 6,\n  \"nombre\": \"Armadura Doradoiuyhoiuhoiuha de Aries\",\n  \"imagen\": \"987698769876987698\",\n  \"fechaLanzamiento\": \"1986-01-01\",\n  \"tipoLamina\": \"CONTEkkkkNIDO\",\n  \"albumId\": 1\n}  ",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:17 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Lámina actualizada correctamente\",\n  \"data\": {\n    \"id\": 1,\n    \"nombre\": \"Armadura Doradoiuyhoiuhoiuha de Aries\",\n    \"imagen\": \"987698769876987698\",\n    \"fechaLanzamiento\": \"1986-01-01\",\n    \"tipoLamina\": \"CONTEkkkkNIDO\",\n    \"createdAt\": \"2025-12-20T00:12:52.064409\",\n    \"updatedAt\": \"2025-12-20T00:12:53.950464\",\n    \"active\": true,\n    \"album\": {\n      \"id\": 1,\n      \"nombre\": \"Caballeros del Zodiaco\",\n      \"year\": 1986\n    }\n  },\n  \"timestamp\": \"2025-12-20T00:16:17.9089378\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas/1",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"id\" : 6,\n  \"nombre\": \"Armadura Doradoiuyhoiuhoiuha de Aries\",\n  \"imagen\": \"987698769876987698\",\n  \"fechaLanzamiento\": \"1986-01-01\",\n  \"tipoLamina\": \"CONTEkkkkNIDO\",\n  \"albumId\": 1\n}  ",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - Eliminar Lamina",
+      "filename": "Lamina - Eliminar Lamina.bru",
+      "seq": 11,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas/1",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:24 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Lámina eliminada correctamente\",\n  \"data\": \"Lámina con ID: 1 ha sido marcada como inactiva\",\n  \"timestamp\": \"2025-12-20T00:16:24.9841568\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas/1",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Album - Obtener album por id",
+      "filename": "Album - Obtener album por id.bru",
+      "seq": 13,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/albums/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:37 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Álbum recuperado exitosamente\",\n  \"data\": {\n    \"id\": 1,\n    \"nombre\": \"Caballeros del Zodiaco\",\n    \"year\": 1986,\n    \"descripcion\": \"Manga clásico sobre guerreros que protegen a Atenea\",\n    \"createdAt\": \"2025-12-20T00:12:48.758799\",\n    \"updatedAt\": \"2025-12-20T00:12:53.950464\"\n  },\n  \"timestamp\": \"2025-12-20T00:16:37.1421404\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/albums/1",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Album - Agregar nuevo album",
+      "filename": "Album - Agregar nuevo album.bru",
+      "seq": 14,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/albums",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"nombre\": \"Made In Abyss\",\n  \"year\": 2022,\n  \"descripcion\": \"Un robot vuelve del abismo y ayuda una joven\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "201",
+            "statusText": "Created",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:44 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Álbum creado exitosamente\",\n  \"data\": {\n    \"id\": 6,\n    \"nombre\": \"Made In Abyss\",\n    \"year\": 2022,\n    \"descripcion\": \"Un robot vuelve del abismo y ayuda una joven\",\n    \"createdAt\": \"2025-12-20T00:16:44.321846\",\n    \"updatedAt\": \"2025-12-20T00:16:44.321846\"\n  },\n  \"timestamp\": \"2025-12-20T00:16:44.7259964\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/albums",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"nombre\": \"Made In Abyss\",\n  \"year\": 2022,\n  \"descripcion\": \"Un robot vuelve del abismo y ayuda una joven\"\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Album - Actualizar datos de album",
+      "filename": "Album - Actualizar datos de album.bru",
+      "seq": 15,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/albums/1",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "    {\n      \"nombre\": \"Caballeros del Zodiaco\",\n      \"year\": 1986,\n      \"descripcion\": \"Manga clásico sobre guerreros que protegen a Atenea en distintas batallas\",\n      \"createdAt\": \"2025-12-19T19:46:27.175978\",\n      \"updatedAt\": \"2025-12-19T19:46:27.175978\"\n    }",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:50 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Álbum actualizado correctamente\",\n  \"data\": {\n    \"id\": 1,\n    \"nombre\": \"Caballeros del Zodiaco\",\n    \"year\": 1986,\n    \"descripcion\": \"Manga clásico sobre guerreros que protegen a Atenea en distintas batallas\",\n    \"createdAt\": \"2025-12-20T00:12:48.758799\",\n    \"updatedAt\": \"2025-12-20T00:12:53.950464\"\n  },\n  \"timestamp\": \"2025-12-20T00:16:50.21729\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/albums/1",
+        "method": "PUT",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "    {\n      \"nombre\": \"Caballeros del Zodiaco\",\n      \"year\": 1986,\n      \"descripcion\": \"Manga clásico sobre guerreros que protegen a Atenea en distintas batallas\",\n      \"createdAt\": \"2025-12-19T19:46:27.175978\",\n      \"updatedAt\": \"2025-12-19T19:46:27.175978\"\n    }",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Album - Eliminar album",
+      "filename": "Album - Eliminar album.bru",
+      "seq": 16,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/albums/1",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:56 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Álbum eliminado correctamente\",\n  \"data\": \"Álbum con ID: 1 ha sido marcado como inactivo\",\n  \"timestamp\": \"2025-12-20T00:16:56.2783282\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/albums/1",
+        "method": "DELETE",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - Agregar lamina a un album con imagen",
+      "filename": "Lamina - Agregar lamina a un album con imagen.bru",
+      "seq": 5,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n        \"nombre\": \"Vegeta - El Príncipe Saiyajin\",\n        \"imagen\": \"https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400\",\n        \"fechaLanzamiento\": \"1989-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n  \"albumId\": 2\n}  ",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "201",
+            "statusText": "Created",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:15:08 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Lámina agregada (repetida: 2 copias totales)\",\n  \"data\": {\n    \"esRepetida\": true,\n    \"estaEnCatalogo\": true,\n    \"cantidadRepetidas\": 2,\n    \"lamina\": {\n      \"id\": 13,\n      \"nombre\": \"Vegeta - El Príncipe Saiyajin\",\n      \"imagen\": \"https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400\",\n      \"fechaLanzamiento\": \"1989-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:15:08.1734895\",\n      \"updatedAt\": \"2025-12-20T00:15:08.1734895\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 2,\n        \"nombre\": \"Dragon Ball Z\",\n        \"year\": 1989\n      }\n    }\n  },\n  \"timestamp\": \"2025-12-20T00:15:08.5781976\"\n}"
+            }
+          }
+        },
+        {
+          "name": "example (1)",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n        \"nombre\": \"Vegeta - El Príncipe Saiyajin\",\n        \"imagen\": \"https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400\",\n        \"fechaLanzamiento\": \"1989-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n  \"albumId\": 2\n}  ",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "201",
+            "statusText": "Created",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:15:19 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Lámina agregada (repetida: 4 copias totales)\",\n  \"data\": {\n    \"esRepetida\": true,\n    \"estaEnCatalogo\": true,\n    \"cantidadRepetidas\": 4,\n    \"lamina\": {\n      \"id\": 15,\n      \"nombre\": \"Vegeta - El Príncipe Saiyajin\",\n      \"imagen\": \"https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400\",\n      \"fechaLanzamiento\": \"1989-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:15:19.2897832\",\n      \"updatedAt\": \"2025-12-20T00:15:19.2897832\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 2,\n        \"nombre\": \"Dragon Ball Z\",\n        \"year\": 1989\n      }\n    }\n  },\n  \"timestamp\": \"2025-12-20T00:15:19.6933784\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n        \"nombre\": \"Vegeta - El Príncipe Saiyajin\",\n        \"imagen\": \"https://images.unsplash.com/photo-1633356122544-f134324ef6db?w=400\",\n        \"fechaLanzamiento\": \"1989-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n  \"albumId\": 2\n}  ",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Album - Listado de laminas catalogo",
+      "filename": "Album - Listado de laminas catalogo.bru",
+      "seq": 18,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/albums/1/catalogo",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:17:14 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Catálogo de láminas obtenido: 3 láminas disponibles\",\n  \"data\": [\n    {\n      \"id\": 2,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:12:49.877654\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950964\",\n      \"active\": true\n    },\n    {\n      \"id\": 3,\n      \"nombre\": \"Batalla contra Hades\",\n      \"imagen\": \"https://images.unsplash.com/photo-1607084591413-25427a3d4d12?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:12:50.414102\",\n      \"updatedAt\": \"2025-12-20T00:12:50.414102\",\n      \"active\": true\n    },\n    {\n      \"id\": 1,\n      \"nombre\": \"Seiya - Caballero de Pegaso\",\n      \"imagen\": \"https://images.unsplash.com/photo-1617637881555-eae2ba6ee46f?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:12:49.338696\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950964\",\n      \"active\": true\n    }\n  ],\n  \"timestamp\": \"2025-12-20T00:17:14.3108269\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/albums/1/catalogo",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Laminas - Listado de faltantes y repetidos por cada una",
+      "filename": "Laminas - Listado de faltantes y repetidos por cada una.bru",
+      "seq": 17,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/albums/1/catalogo/estado",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:17:05 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Estado del álbum obtenido\",\n  \"data\": {\n    \"laminasPoseidas\": [\n      {\n        \"id\": 2,\n        \"nombre\": \"Seiya - Caballero de Pegaso\",\n        \"imagen\": \"https://images.unsplash.com/photo-1617637881555-eae2ba6ee46f?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"PORTADA\",\n        \"createdAt\": \"2025-12-20T00:12:52.60154\",\n        \"updatedAt\": \"2025-12-20T00:12:53.950964\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 3,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:12:53.140771\",\n        \"updatedAt\": \"2025-12-20T00:12:53.950964\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 16,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:15:30.085948\",\n        \"updatedAt\": \"2025-12-20T00:15:30.085948\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 17,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:15:33.317404\",\n        \"updatedAt\": \"2025-12-20T00:15:33.317404\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 18,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:15:35.817718\",\n        \"updatedAt\": \"2025-12-20T00:15:35.817718\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 19,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:15:58.347379\",\n        \"updatedAt\": \"2025-12-20T00:15:58.347379\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 20,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:15:58.619804\",\n        \"updatedAt\": \"2025-12-20T00:15:58.619804\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 21,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:15:58.908841\",\n        \"updatedAt\": \"2025-12-20T00:15:58.908841\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 22,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:15:59.187605\",\n        \"updatedAt\": \"2025-12-20T00:15:59.187605\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 23,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:16:09.227395\",\n        \"updatedAt\": \"2025-12-20T00:16:09.227395\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 24,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:16:09.49924\",\n        \"updatedAt\": \"2025-12-20T00:16:09.49924\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 25,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:16:09.772428\",\n        \"updatedAt\": \"2025-12-20T00:16:09.772428\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      },\n      {\n        \"id\": 26,\n        \"nombre\": \"Armadura Dorada de Aries\",\n        \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:16:10.045282\",\n        \"updatedAt\": \"2025-12-20T00:16:10.045282\",\n        \"active\": true,\n        \"album\": {\n          \"id\": 1,\n          \"nombre\": \"Caballeros del Zodiaco\",\n          \"year\": 1986\n        }\n      }\n    ],\n    \"laminasFaltantes\": [\n      {\n        \"id\": 3,\n        \"nombre\": \"Batalla contra Hades\",\n        \"imagen\": \"https://images.unsplash.com/photo-1607084591413-25427a3d4d12?w=400\",\n        \"fechaLanzamiento\": \"1986-01-01\",\n        \"tipoLamina\": \"CONTENIDO\",\n        \"createdAt\": \"2025-12-20T00:12:50.414102\",\n        \"updatedAt\": \"2025-12-20T00:12:50.414102\",\n        \"active\": true\n      }\n    ],\n    \"laminasRepetidas\": {\n      \"Armadura Dorada de Aries\": 12\n    },\n    \"totalLaminas\": 13,\n    \"laminasFaltantesTotal\": 1,\n    \"laminasRepetidastotal\": 12\n  },\n  \"timestamp\": \"2025-12-20T00:17:05.0770874\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/albums/1/catalogo/estado",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - Agregar lamina Masivo con fallo",
+      "filename": "Lamina - Agregar lamina Masivo con fallo.bru",
+      "seq": 8,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas/masivo",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"albumId\": 1,\n  \"laminas\": [\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Leo\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-03-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Virgo\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-03-15\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Libra\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-04-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Escorpio\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-04-15\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Sagitario\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-05-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Capricornio\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-05-15\",\n      \"tipoLamina\": \"CONTENIDO\"\n    }\n  ]\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "201",
+            "statusText": "Created",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:00 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": false,\n  \"message\": \"Carga masiva completada: 4 exitosas, 6 fallidas\",\n  \"data\": [\n    {\n      \"laminaId\": 19,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"esRepetida\": true,\n      \"cantidadRepetidas\": 5,\n      \"estaEnCatalogo\": true,\n      \"estado\": \"✓ AGREGADA (Repetida: 5 copias)\"\n    },\n    {\n      \"laminaId\": 20,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"esRepetida\": true,\n      \"cantidadRepetidas\": 6,\n      \"estaEnCatalogo\": true,\n      \"estado\": \"✓ AGREGADA (Repetida: 6 copias)\"\n    },\n    {\n      \"laminaId\": 21,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"esRepetida\": true,\n      \"cantidadRepetidas\": 7,\n      \"estaEnCatalogo\": true,\n      \"estado\": \"✓ AGREGADA (Repetida: 7 copias)\"\n    },\n    {\n      \"laminaId\": 22,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"esRepetida\": true,\n      \"cantidadRepetidas\": 8,\n      \"estaEnCatalogo\": true,\n      \"estado\": \"✓ AGREGADA (Repetida: 8 copias)\"\n    },\n    {\n      \"laminaId\": null,\n      \"nombre\": \"Armadura Dorada de Leo\",\n      \"esRepetida\": false,\n      \"cantidadRepetidas\": 0,\n      \"estaEnCatalogo\": false,\n      \"estado\": \"❌ NO AGREGADA: No está en el catálogo\"\n    },\n    {\n      \"laminaId\": null,\n      \"nombre\": \"Armadura Dorada de Virgo\",\n      \"esRepetida\": false,\n      \"cantidadRepetidas\": 0,\n      \"estaEnCatalogo\": false,\n      \"estado\": \"❌ NO AGREGADA: No está en el catálogo\"\n    },\n    {\n      \"laminaId\": null,\n      \"nombre\": \"Armadura Dorada de Libra\",\n      \"esRepetida\": false,\n      \"cantidadRepetidas\": 0,\n      \"estaEnCatalogo\": false,\n      \"estado\": \"❌ NO AGREGADA: No está en el catálogo\"\n    },\n    {\n      \"laminaId\": null,\n      \"nombre\": \"Armadura Dorada de Escorpio\",\n      \"esRepetida\": false,\n      \"cantidadRepetidas\": 0,\n      \"estaEnCatalogo\": false,\n      \"estado\": \"❌ NO AGREGADA: No está en el catálogo\"\n    },\n    {\n      \"laminaId\": null,\n      \"nombre\": \"Armadura Dorada de Sagitario\",\n      \"esRepetida\": false,\n      \"cantidadRepetidas\": 0,\n      \"estaEnCatalogo\": false,\n      \"estado\": \"❌ NO AGREGADA: No está en el catálogo\"\n    },\n    {\n      \"laminaId\": null,\n      \"nombre\": \"Armadura Dorada de Capricornio\",\n      \"esRepetida\": false,\n      \"cantidadRepetidas\": 0,\n      \"estaEnCatalogo\": false,\n      \"estado\": \"❌ NO AGREGADA: No está en el catálogo\"\n    }\n  ],\n  \"timestamp\": \"2025-12-20T00:16:00.4326794\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas/masivo",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"albumId\": 1,\n  \"laminas\": [\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Leo\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-03-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Virgo\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-03-15\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Libra\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-04-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Escorpio\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-04-15\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Sagitario\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-05-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Capricornio\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-05-15\",\n      \"tipoLamina\": \"CONTENIDO\"\n    }\n  ]\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - post agregar lamina No existente en catalogo",
+      "filename": "Lamina - post agregar lamina No existente en catalogo.bru",
+      "seq": 7,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"nombre\": \"Armadoijoijoijura Dorada de Aries\",\n  \"imagen\": \"987698769876987698\",\n  \"fechaLanzamiento\": \"1986-01-01\",\n  \"tipoLamina\": \"CONTENIDO\",\n  \"albumId\": 1\n}  ",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "400",
+            "statusText": "Bad Request",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:15:49 GMT"
+              },
+              {
+                "name": "connection",
+                "value": "close"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": false,\n  \"message\": \"❌ ERROR: La lámina 'Armadoijoijoijura Dorada de Aries' NO existe en el catálogo del álbum. Solo puedes agregar láminas que están definidas en el catálogo.\",\n  \"errorCode\": \"LAMINA_NOT_IN_CATALOG\",\n  \"timestamp\": \"2025-12-20T00:15:49.2731463\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"nombre\": \"Armadoijoijoijura Dorada de Aries\",\n  \"imagen\": \"987698769876987698\",\n  \"fechaLanzamiento\": \"1986-01-01\",\n  \"tipoLamina\": \"CONTENIDO\",\n  \"albumId\": 1\n}  ",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - Listar láminas de un álbum",
+      "filename": "Lamina - Listar láminas de un álbum.bru",
+      "seq": 4,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas/album/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 01:54:00 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Láminas del álbum obtenidas correctamente. Total: 13\",\n  \"data\": [\n    {\n      \"id\": 1,\n      \"nombre\": \"Armadura Doradoiuyhoiuhoiuha de Aries\",\n      \"imagen\": \"987698769876987698\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTEkkkkNIDO\",\n      \"createdAt\": \"2025-12-19T22:49:48.143773\",\n      \"updatedAt\": \"2025-12-19T22:52:53.941505\",\n      \"active\": false,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 2,\n      \"nombre\": \"Seiya - Caballero de Pegaso\",\n      \"imagen\": \"https://images.unsplash.com/photo-1617637881555-eae2ba6ee46f?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-19T22:49:48.69351\",\n      \"updatedAt\": \"2025-12-19T22:49:48.69351\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 3,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:49:49.239757\",\n      \"updatedAt\": \"2025-12-19T22:49:50.063145\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 13,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:50:37.224082\",\n      \"updatedAt\": \"2025-12-19T22:50:37.224082\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 15,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:50:58.276548\",\n      \"updatedAt\": \"2025-12-19T22:50:58.276548\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 16,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:52:14.976393\",\n      \"updatedAt\": \"2025-12-19T22:52:14.976393\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 17,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:52:15.249494\",\n      \"updatedAt\": \"2025-12-19T22:52:15.249494\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 18,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:52:15.52234\",\n      \"updatedAt\": \"2025-12-19T22:52:15.52234\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 19,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:52:15.795034\",\n      \"updatedAt\": \"2025-12-19T22:52:15.795034\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 20,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:52:39.247594\",\n      \"updatedAt\": \"2025-12-19T22:52:39.247594\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 21,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:52:39.520611\",\n      \"updatedAt\": \"2025-12-19T22:52:39.520611\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 22,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:52:39.793503\",\n      \"updatedAt\": \"2025-12-19T22:52:39.793503\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 23,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-19T22:52:40.066117\",\n      \"updatedAt\": \"2025-12-19T22:52:40.066117\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    }\n  ],\n  \"timestamp\": \"2025-12-19T22:54:00.6112132\"\n}"
+            }
+          }
+        },
+        {
+          "name": "example (1)",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas/album/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "200",
+            "statusText": "OK",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:14:54 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Láminas del álbum obtenidas correctamente. Total: 3\",\n  \"data\": [\n    {\n      \"id\": 1,\n      \"nombre\": \"Seiya - Caballero de Pegaso\",\n      \"imagen\": \"https://images.unsplash.com/photo-1617637881555-eae2ba6ee46f?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:12:52.064409\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950464\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 2,\n      \"nombre\": \"Seiya - Caballero de Pegaso\",\n      \"imagen\": \"https://images.unsplash.com/photo-1617637881555-eae2ba6ee46f?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"PORTADA\",\n      \"createdAt\": \"2025-12-20T00:12:52.60154\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950964\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    },\n    {\n      \"id\": 3,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\",\n      \"createdAt\": \"2025-12-20T00:12:53.140771\",\n      \"updatedAt\": \"2025-12-20T00:12:53.950964\",\n      \"active\": true,\n      \"album\": {\n        \"id\": 1,\n        \"nombre\": \"Caballeros del Zodiaco\",\n        \"year\": 1986\n      }\n    }\n  ],\n  \"timestamp\": \"2025-12-20T00:14:54.8494119\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas/album/1",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    },
+    {
+      "type": "http",
+      "name": "Lamina - Agregar lamina Masivo sin fallo",
+      "filename": "Lamina - Agregar lamina Masivo sin fallo.bru",
+      "seq": 9,
+      "settings": {
+        "encodeUrl": true,
+        "timeout": 0
+      },
+      "tags": [],
+      "examples": [
+        {
+          "name": "example",
+          "description": "",
+          "type": "http",
+          "request": {
+            "url": "http://localhost:8080/api/laminas/masivo",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"albumId\": 1,\n  \"laminas\": [\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    }\n  ]\n}",
+              "formUrlEncoded": [],
+              "multipartForm": [],
+              "file": []
+            }
+          },
+          "response": {
+            "status": "201",
+            "statusText": "Created",
+            "headers": [
+              {
+                "name": "content-type",
+                "value": "application/json"
+              },
+              {
+                "name": "transfer-encoding",
+                "value": "chunked"
+              },
+              {
+                "name": "date",
+                "value": "Sat, 20 Dec 2025 03:16:10 GMT"
+              },
+              {
+                "name": "keep-alive",
+                "value": "timeout=60"
+              },
+              {
+                "name": "connection",
+                "value": "keep-alive"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "content": "{\n  \"success\": true,\n  \"message\": \"Carga masiva completada: 4 exitosas, 0 fallidas\",\n  \"data\": [\n    {\n      \"laminaId\": 23,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"esRepetida\": true,\n      \"cantidadRepetidas\": 9,\n      \"estaEnCatalogo\": true,\n      \"estado\": \"✓ AGREGADA (Repetida: 9 copias)\"\n    },\n    {\n      \"laminaId\": 24,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"esRepetida\": true,\n      \"cantidadRepetidas\": 10,\n      \"estaEnCatalogo\": true,\n      \"estado\": \"✓ AGREGADA (Repetida: 10 copias)\"\n    },\n    {\n      \"laminaId\": 25,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"esRepetida\": true,\n      \"cantidadRepetidas\": 11,\n      \"estaEnCatalogo\": true,\n      \"estado\": \"✓ AGREGADA (Repetida: 11 copias)\"\n    },\n    {\n      \"laminaId\": 26,\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"esRepetida\": true,\n      \"cantidadRepetidas\": 12,\n      \"estaEnCatalogo\": true,\n      \"estado\": \"✓ AGREGADA (Repetida: 12 copias)\"\n    }\n  ],\n  \"timestamp\": \"2025-12-20T00:16:10.451978\"\n}"
+            }
+          }
+        }
+      ],
+      "request": {
+        "url": "http://localhost:8080/api/laminas/masivo",
+        "method": "POST",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "json",
+          "json": "{\n  \"albumId\": 1,\n  \"laminas\": [\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    },\n    {\n      \"nombre\": \"Armadura Dorada de Aries\",\n      \"imagen\": \"https://images.unsplash.com/photo-1578322154310-cc4ecca2f5d5?w=400\",\n      \"fechaLanzamiento\": \"1986-01-01\",\n      \"tipoLamina\": \"CONTENIDO\"\n    }\n  ]\n}",
+          "formUrlEncoded": [],
+          "multipartForm": [],
+          "file": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "docs": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "brunoConfig": {
+    "version": "1",
+    "name": "18.web2.examen",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ],
+    "size": 0,
+    "filesCount": 0,
+    "presets": {
+      "requestType": "http",
+      "requestUrl": "http://localhost:8080/api"
+    }
+  }
+}

@@ -19,7 +19,7 @@
 
 ## 📖 Descripción
 
-API REST profesional desarrollada con **Spring Boot 3.5.9** para la gestión integral de álbumes de colección y sus láminas. Sistema diseñado con arquitectura limpia, validación automática contra catálogo maestro, detección inteligente de láminas repetidas y operaciones CRUD completas.
+API REST desarrollada con **Spring Boot 3.5.9** para la gestión integral de álbumes de colección y sus láminas.
 
 ### ✨ Características Destacadas
 
@@ -376,4 +376,12 @@ El proyecto utiliza **MySQL** montado en **AWS RDS**
 
 </div>
 
+### SWAGGER UI
+![SWAGGER](screenshots/swagger.png)
+
 ---
+
+
+### Colecciones de API Postman y Bruno disponibles en:
+![Postman](api-collections/18.web2.examen-postman.json)
+![Bruno](api-collections/18.web2.examen-bruno.json)
