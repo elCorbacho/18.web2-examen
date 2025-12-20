@@ -83,6 +83,7 @@ Una vez iniciada la aplicación, accede a:
 
 🌐 **API Base URL:** `http://localhost:8080`  
 🔍 **Actuator Health:** `http://localhost:8080/actuator/health`
+📜 **Swagger UI:** `http://localhost:8080/swagger-ui.html`
 
 ---
 
@@ -90,14 +91,7 @@ Una vez iniciada la aplicación, accede a:
 
 El proyecto utiliza **MySQL** montado en **AWS RDS** para producción.
 
-Para desarrollo local, puedes cambiar a H2 en memoria modificando `application.properties`:
 
-```properties
-# H2 para desarrollo local
-spring.datasource.url=jdbc:h2:mem:testdb
-spring.datasource.driverClassName=org.h2.Driver
-spring.h2.console.enabled=true
-```
 
 Consola H2: `http://localhost:8080/h2-console`
 
