@@ -90,7 +90,7 @@ Una vez iniciada la aplicación, accede a:
 ## 💾 Base de Datos
 
 El proyecto utiliza **MySQL** montado en **AWS RDS** 
-![ddbb](screenshots/ddbb-diagram.png)
+![ddbb](screenshots/ddbb-diagram2.png)
 
 
 ## 📡 API Endpoints
