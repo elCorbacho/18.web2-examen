@@ -290,8 +290,7 @@ El proyecto utiliza **MySQL** montado en **AWS RDS**
 - 🔥 **Spring Boot DevTools** - Hot-reload en desarrollo
 
 ### Base de Datos
-- 🐬 **MySQL** - Base de datos en AWS RDS (Producción)
-- 💾 **H2 Database** - Base de datos en memoria (Desarrollo)
+- 🐬 **MySQL** - Base de datos en AWS RDS
 
 ### Herramientas y Librerías
 - 🧰 **Lombok** - Reducción de código boilerplate
