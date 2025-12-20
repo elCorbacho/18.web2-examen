@@ -36,8 +36,7 @@ cd 18.web2-examen
 La aplicación estará disponible en: **http://localhost:8080**
 
 ### Base de Datos
-Montada con MySQL en AWS RDS. 
----
+Montada con MySQL en AWS RDS.
 
 ## 📡 Endpoints Disponibles
 
