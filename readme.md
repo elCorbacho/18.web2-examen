@@ -304,3 +304,76 @@ El proyecto utiliza **MySQL** montado en **AWS RDS**
 - ⏰ **JPA Auditing** - Auditoría automática
 
 ---
+
+## 📸 Capturas de Pantalla
+
+### 🚀 Aplicación en Ejecución
+
+<div align="center">
+
+![Aplicación Iniciada](screenshots/1%20app%20up.png)
+*Aplicación Spring Boot iniciada correctamente*
+
+</div>
+
+---
+
+### 🧪 Pruebas de API con Postman
+
+<div align="center">
+
+![Prueba de API](screenshots/2%20api%20test.png)
+*Testing de endpoints REST con Postman*
+
+</div>
+
+---
+
+### 📊 Operaciones y Respuestas
+
+<div align="center">
+
+![Operación 3](screenshots/3.png)
+![Operación 4](screenshots/4.png)
+![Operación 5](screenshots/5.png)
+![Operación 6](screenshots/6.png)
+![Operación 7](screenshots/7.png)
+![Operación 8](screenshots/8.png)
+![Operación 9](screenshots/9.png)
+![Operación 10](screenshots/10.png)
+![Operación 11](screenshots/11.png)
+![Operación 12](screenshots/12.png)
+![Operación 13](screenshots/13.png)
+![Operación 14](screenshots/14.png)
+![Operación 15](screenshots/15.png)
+![Operación 16](screenshots/16.png)
+![Operación 17](screenshots/17.png)
+![Operación 18](screenshots/18.png)
+![Operación 19](screenshots/19.png)
+
+</div>
+
+---
+
+### 💾 Base de Datos
+
+<div align="center">
+
+![Base de Datos 1](screenshots/ddbb1.png)
+*Estructura de tablas*
+
+![Base de Datos 2](screenshots/ddbb2.png)
+*Datos almacenados*
+
+![Base de Datos 3](screenshots/ddbb3.png)
+*Registros de láminas*
+
+![Base de Datos 4](screenshots/ddbb4.png)
+*Catálogo de láminas*
+
+![Base de Datos 5](screenshots/ddbb5.png)
+*Relaciones y datos completos*
+
+</div>
+
+---
