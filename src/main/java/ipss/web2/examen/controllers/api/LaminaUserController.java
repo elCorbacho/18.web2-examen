@@ -153,9 +153,6 @@ public class LaminaUserController {
      */
     @GetMapping("/album/{albumId}")
     public ResponseEntity<ApiResponseDTO<List<LaminaResponseDTO>>> obtenerLaminasPorAlbum(@PathVariable Long albumId) {
-        Album album = albumRepository.findById(albumId)
-                .orElseThrow(() -> new RuntimeException("Álbum no encontrado con ID: " + albumId));
-        
         List<LaminaResponseDTO> laminas = laminaService.obtenerLaminasPorAlbum(albumId);
         
         return ResponseEntity.ok(ApiResponseDTO.<List<LaminaResponseDTO>>builder()
