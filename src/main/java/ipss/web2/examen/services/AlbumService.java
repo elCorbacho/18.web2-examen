@@ -73,4 +73,13 @@ public class AlbumService {
         album.setActive(false);
         albumRepository.save(album);
     }
+    
+    /**
+     * Obtener entidad Album por ID (para uso interno de otros servicios/controllers)
+     */
+    @Transactional(readOnly = true)
+    public Album obtenerAlbumEntityPorId(Long id) {
+        return albumRepository.findById(id)
+                .orElseThrow(() -> new ResourceNotFoundException("Album", "ID", id));
+    }
 }

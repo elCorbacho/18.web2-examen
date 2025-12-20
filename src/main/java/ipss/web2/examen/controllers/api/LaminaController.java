@@ -5,7 +5,7 @@ import ipss.web2.examen.dtos.LaminaCatalogoRequestDTO;
 import ipss.web2.examen.dtos.LaminaCatalogoResponseDTO;
 import ipss.web2.examen.dtos.LaminasEstadoDTO;
 import ipss.web2.examen.models.Album;
-import ipss.web2.examen.repository.AlbumRepository;
+import ipss.web2.examen.services.AlbumService;
 import ipss.web2.examen.services.LaminaService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
@@ -27,7 +27,7 @@ import java.util.List;
 public class LaminaController {
     
     private final LaminaService laminaService;
-    private final AlbumRepository albumRepository;
+    private final AlbumService albumService;
     
     /**
      * POST /api/albums/{albumId}/catalogo - Crear catálogo de láminas
@@ -38,8 +38,7 @@ public class LaminaController {
             @PathVariable Long albumId,
             @Valid @RequestBody List<LaminaCatalogoRequestDTO> catalogo) {
         
-        Album album = albumRepository.findById(albumId)
-                .orElseThrow(() -> new RuntimeException("Álbum no encontrado con ID: " + albumId));
+        Album album = albumService.obtenerAlbumEntityPorId(albumId);
         
         List<LaminaCatalogoResponseDTO> response = laminaService.crearCatalogo(albumId, catalogo, album);
         
@@ -58,8 +57,7 @@ public class LaminaController {
      */
     @GetMapping
     public ResponseEntity<ApiResponseDTO<List<LaminaCatalogoResponseDTO>>> obtenerCatalogo(@PathVariable Long albumId) {
-        Album album = albumRepository.findById(albumId)
-                .orElseThrow(() -> new RuntimeException("Álbum no encontrado con ID: " + albumId));
+        Album album = albumService.obtenerAlbumEntityPorId(albumId);
         
         List<LaminaCatalogoResponseDTO> catalogo = laminaService.obtenerCatalogo(album);
         
@@ -77,8 +75,7 @@ public class LaminaController {
      */
     @GetMapping("/estado")
     public ResponseEntity<ApiResponseDTO<LaminasEstadoDTO>> obtenerEstado(@PathVariable Long albumId) {
-        Album album = albumRepository.findById(albumId)
-                .orElseThrow(() -> new RuntimeException("Álbum no encontrado con ID: " + albumId));
+        Album album = albumService.obtenerAlbumEntityPorId(albumId);
         
         LaminasEstadoDTO estado = laminaService.obtenerEstado(albumId, album);
         
